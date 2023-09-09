@@ -1,0 +1,103 @@
+import java.util.*;
+public class exp {
+    public static void Hello_World(){
+        //program for printing the hello world
+        System.out.print("Hello World");
+    }
+    public static void table(int n){
+        //problem statement number 2
+        for(int i=1; i<=10; i++){
+           System.out.println(n+" X"+i+"= "+ n*i);
+        }
+
+    }
+    public static void Sum(int n){
+        //program statement number3
+        int sum=0;
+        while(n>0){
+            int digit2=n%10;
+            sum+=digit2;
+            n=n/10;
+            
+        }
+        System.out.println("the sum of the digits will be "+sum);
+    }
+    public static void Spy(int n){
+        //program for knowing the spy numbers
+        int sum=0;
+        int product=1;
+        int m=n;
+         while(n>0){
+            int digit=n%10;
+            sum+=digit;
+            n=n/10;
+            
+         }
+         n=m;
+         while(n>0){
+            int digit1=n%10;
+            product*=digit1;
+            n=n/10;
+         }
+         if(sum==product){
+            System.out.println("the number is a spy number");
+         }else{
+            System.out.println("the number is not spy number");
+         }
+    }
+   
+        public static void concat(String word,String Line){
+            System.out.println(" The concatenation will be "+word+Line);
+            
+       
+        }
+        public static void main(String[] args){
+        
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter the number");
+        int n=sc.nextInt();
+        sc.nextLine();
+          System.out.println("Enter the String whose reverse you want");
+        String mradul=sc.nextLine();
+        
+        System.out.println("Enter the Word  ");
+        String word=sc.nextLine();
+        sc.nextLine();
+         System.out.println("Enter the Line");
+        
+        String Line =sc.nextLine();
+        
+         Hello_World();
+         table(n);
+         Sum(n);
+         Spy(n);
+         concat(word,Line);
+          Reverse(mradul);
+        
+        
+        
+
+    }
+    public static void Reverse(String mradul){
+        int n=mradul.length();
+        String reverse_Str="";
+        
+         for(int i=n-1; i>=0; i--){
+            reverse_Str+=mradul.charAt(i);
+           
+            
+
+         }
+        System.out.print("the reverse string will be");
+         for(int i=0; i<=n-1; i++){ 
+            if(i==0){
+                    System.out.print(" "+reverse_Str.charAt(i));
+            }else{
+                 System.out.print(reverse_Str.charAt(i));
+            }     
+          
+         }
+        
+       
+    }
+}
